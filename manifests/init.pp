@@ -39,7 +39,7 @@ class play ($version = "1.2.3", $install_path = "/opt") {
 	$play_version = $version
 	$play_path = "${install_path}/play-${play_version}"
 	$download_url = $play_version ? {
-	  '2.1.0' => "http://downloads.typesafe.com/play/${play_version}/play-${play_version}.zip",
+	  /^(2\.1\..*)/ => "http://downloads.typesafe.com/play/${play_version}/play-${play_version}.zip",
 	  default => "http://downloads.typesafe.com/releases/play-${play_version}.zip",
 	}
 	
